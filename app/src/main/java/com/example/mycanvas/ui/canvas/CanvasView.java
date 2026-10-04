@@ -3,6 +3,7 @@ package com.example.mycanvas.ui.canvas;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.util.AttributeSet;
@@ -21,9 +22,9 @@ public class CanvasView extends View {
 
     private List<Stroke> strokes = new ArrayList<>();
 
-    private int colorCanvas;
+    private int colorCanvas = Color.WHITE;
 
-    private int colorBrush;
+    private int colorBrush = Color.BLACK;
 
     private float lastX;
 
