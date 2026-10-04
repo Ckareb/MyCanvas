@@ -22,9 +22,9 @@ public class CanvasView extends View {
 
     private List<Stroke> strokes = new ArrayList<>();
 
-    private int colorCanvas = Color.WHITE;
+    private int colorCanvas = Color.BLACK;
 
-    private int colorBrush = Color.BLACK;
+    private int colorBrush = Color.WHITE;
 
     private float lastX;
 
@@ -69,13 +69,11 @@ public class CanvasView extends View {
 
     public void setColorCanvas(int colorCanvas) {
         this.colorCanvas = colorCanvas;
-        invalidate();
     }
 
 
     public void setColorBrush(int colorBrush) {
         this.colorBrush = colorBrush;
-        invalidate();
     }
 
     @Override

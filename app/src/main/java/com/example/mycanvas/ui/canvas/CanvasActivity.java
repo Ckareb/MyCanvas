@@ -28,7 +28,9 @@ public class CanvasActivity extends BaseActivity {
 
     private Spinner spinnerBrushCanvas;
 
-    private List<Colors> colors = Arrays.asList(Colors.values());
+    private List<Colors> colorsCanvasList = Arrays.asList(Colors.values());
+
+    private List<Colors> colorsBrushList = colorsCanvasList.reversed();
 
     private CanvasView canvasView;
 
@@ -62,8 +64,11 @@ public class CanvasActivity extends BaseActivity {
 
         List<String> brushCanvasList = new ArrayList<>();
 
-        colors.forEach(color -> {
+        colorsCanvasList.forEach(color -> {
             colorCanvasList.add(color.getTitle());
+        });
+
+        colorsBrushList.forEach(color -> {
             brushCanvasList.add(color.getTitle());
         });
 
@@ -100,7 +105,7 @@ public class CanvasActivity extends BaseActivity {
                 new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                        Colors color = colors.get(position);
+                        Colors color = colorsCanvasList.get(position);
 
                         canvasView.setColorCanvas(color.getColor());
                     }
@@ -115,8 +120,7 @@ public class CanvasActivity extends BaseActivity {
                 new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                        colors = colors.reversed();
-                        Colors color = colors.get(position);
+                        Colors color = colorsBrushList.get(position);
 
                         canvasView.setColorBrush(color.getColor());
                     }
