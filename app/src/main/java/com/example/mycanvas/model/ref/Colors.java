@@ -4,11 +4,11 @@ import android.graphics.Color;
 
 public enum Colors {
     BLACK("Черный", Color.BLACK),
-    WHITE("Белый", Color.WHITE),
     GREEN("Зеленый", Color.GREEN),
     BLUE("Синий", Color.BLUE),
     RED("Красный", Color.RED),
-    YELLOW("Желтый", Color.YELLOW);
+    YELLOW("Желтый", Color.YELLOW),
+    WHITE("Белый", Color.WHITE);
 
     private final String title;
 

@@ -115,6 +115,7 @@ public class CanvasActivity extends BaseActivity {
                 new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        colors = colors.reversed();
                         Colors color = colors.get(position);
 
                         canvasView.setColorBrush(color.getColor());
