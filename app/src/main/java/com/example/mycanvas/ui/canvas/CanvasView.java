@@ -69,11 +69,13 @@ public class CanvasView extends View {
 
     public void setColorCanvas(int colorCanvas) {
         this.colorCanvas = colorCanvas;
+        invalidate();
     }
 
 
     public void setColorBrush(int colorBrush) {
         this.colorBrush = colorBrush;
+        invalidate();
     }
 
     @Override
