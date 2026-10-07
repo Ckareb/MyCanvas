@@ -36,7 +36,7 @@ public class CanvasActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.canvas;
+        return R.layout.canvas_activity;
     }
 
     @Override
